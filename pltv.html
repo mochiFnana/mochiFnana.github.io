@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  mesin penjawab persamaan linear tiga variabel menggunakan metode determinan
+</title>
+</head>
+<body align="center">
+  <div id="main">
+  <h3>SILAHKAN CLICK TOMBOL DIBAWAH INI DAN MASUKKAN ANGKA-ANGKA YANG DIBUTUHKAN DALAM MENGERJAKAN PERSAMAAN LINEAR TIGA VARIABEL!!!</h3>
+  <button type="button" onclick=ejkau()>CLICK HERE !!!</button>
+<SCRIPT>
+function ejkau(){
+function pltf (a, b, c, d, e, f, n, o, p, q, r, s,){
+  var g;
+  var h;
+  var i;
+  var j;
+  var k;
+  var l;
+  var m;
+  var u;
+  var v;
+  var w;
+  var x;
+  var y;
+  var z;
+  var t;
+  var aa;
+  var bb;
+  g = a * f * r 
+    + b * n * p 
+    + c * e * q
+  k = p * f * c 
+    + q * n * a 
+    + r * e * b
+  h = d * f * r 
+    + b * n * s 
+    + c * o * q
+  l = s * f * c 
+    + q * n * d 
+    + r * o * b
+  i = a * o * r 
+    + d * n * p 
+    + c * e * s
+  m = p * o * c 
+    + s * n * a 
+    + r * e * d
+  j = a * f * s 
+    + b * o * p 
+    + d * e * q
+  u = p * f * d 
+    + q * o * a 
+    + s * e * b 
+  v = g - k 
+  w = h - l 
+  x = i - m
+  y = j - u 
+  z = w / v
+  t = x / v
+  aa = y / v 
+  return z;
+}
+function pltf_a (a, b, c, d, e, f, n, o, p, q, r, s,){
+  var g;
+  var h;
+  var i;
+  var j;
+  var k;
+  var l;
+  var m;
+  var u;
+  var v;
+  var w;
+  var x;
+  var y;
+  var z;
+  var t;
+  var aa;
+  var bb;
+  g = a * f * r 
+    + b * n * p 
+    + c * e * q
+  k = p * f * c 
+    + q * n * a 
+    + r * e * b
+  h = d * f * r 
+    + b * n * s 
+    + c * o * q
+  l = s * f * c 
+    + q * n * d 
+    + r * o * b
+  i = a * o * r 
+    + d * n * p 
+    + c * e * s
+  m = p * o * c 
+    + s * n * a 
+    + r * e * d
+  j = a * f * s 
+    + b * o * p 
+    + d * e * q
+  u = p * f * d 
+    + q * o * a 
+    + s * e * b 
+  v = g - k 
+  w = h - l 
+  x = i - m
+  y = j - u 
+  z = w / v
+  t = x / v
+  aa = y / v 
+  return t;
+}
+function pltf_b (a, b, c, d, e, f, n, o, p, q, r, s,){
+  var g;
+  var h;
+  var i;
+  var j;
+  var k;
+  var l;
+  var m;
+  var u;
+  var v;
+  var w;
+  var x;
+  var y;
+  var z;
+  var t;
+  var aa;
+  var bb;
+  g = a * f * r 
+    + b * n * p 
+    + c * e * q
+  k = p * f * c 
+    + q * n * a 
+    + r * e * b
+  h = d * f * r 
+    + b * n * s 
+    + c * o * q
+  l = s * f * c 
+    + q * n * d 
+    + r * o * b
+  i = a * o * r 
+    + d * n * p 
+    + c * e * s
+  m = p * o * c 
+    + s * n * a 
+    + r * e * d
+  j = a * f * s 
+    + b * o * p 
+    + d * e * q
+  u = p * f * d 
+    + q * o * a 
+    + s * e * b 
+  v = g - k 
+  w = h - l 
+  x = i - m
+  y = j - u 
+  z = w / v
+  t = x / v
+  aa = y / v 
+  return aa;
+}
+;
+var ab;
+var bc;
+var cd;
+var de;
+var ef;
+var fg;
+var gh;
+var hi;
+var ij;
+var jk;
+var kl;
+var lm;
+ab = prompt ("       masukkan variabel  (x1)")
+bc = prompt ("       masukkan variabel  (y1)")
+cd = prompt ("       masukkan variabel  (z1)")
+de = prompt ("       masukkan variabel  (A1)")
+ef = prompt ("       masukkan variabel  (x2)")
+fg = prompt ("       masukkan variabel  (y2)")
+gh = prompt ("       masukkan variabel  (z2)")
+hi = prompt ("       masukkan variabel  (A2)")
+ij = prompt ("       masukkan variabel  (x3)")
+jk = prompt ("       masukkan variabel  (y3)")
+kl = prompt ("       masukkan variabel  (z3)")
+lm = prompt ("       masukkan variabel  (A3)")
+document.getElementById("kali").innerHTML= (pltf (ab, bc, cd, de, ef, fg, gh, hi, ij, jk, kl, lm))
+document.getElementById("kbli").innerHTML= (pltf_a (ab, bc, cd, de, ef, fg, gh, hi, ij, jk, kl, lm))
+document.getElementById("kcli").innerHTML= (pltf_b (ab, bc, cd, de, ef, fg, gh, hi, ij, jk, kl, lm))
+}
+</script>
+  <style>
+  body{
+    background: linear-gradient(to right,#c081f1,#f19191,#84ddf3);
+  }
+  #kali{
+    background:#0c9ced75;
+    color:#000000;
+    font-size: 25px;
+  }
+  </style> 
+    <style>
+  #kbli{
+    background:#0c9ced75;
+    color:#000000;
+    font-size: 25px;
+  }
+  </style> 
+    <style>
+  #kcli{
+    background:#0c9ced75;
+    color:#000000;
+    font-size: 25px;
+  }
+  </style>
+  <h2>
+<script>
+function manui(){
+  document.getElementById("ksea").innerHTML=
+  "<br>x1_y1_z1=A1<br>x2_y2_z2=A2<br>x3_y3_z3=A3"
+}
+</script>
+</h2>
+<h2>
+jawaban:<br>
+X=
+<div id="kali"></div>
+Y=
+<div id="kbli"></div>
+Z=
+<div id="kcli"></div>
+JIKA MASIH BELUM FAHAM,SILAHKAN CLICK TOMBOL <ins>KETENTUAN</ins> DIBAWAH INI
+<div id="ksea"></div>
+<br>
+<button type="button" onclick=manui()>KETENTUAN</button>
+<br><br>perhatian!!</h2><h4>penyelesaian persamaan tiga variabel ini menggunakan <ins>metode determinan</ins> sehingga pertanyaan yang didalamnya <ins>tidak dapat melengkapi</ins> salah satu ketentuan diatas maka jawabanya pasti akan <ins>salah</ins>
+</h4>
+</div>
+<style>
+#main{
+  color:#c03939;
+}
+</style>
+</body>
+</html>
