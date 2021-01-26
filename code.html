@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+				<head>
+								
+				</head>
+<body>
+  <center>
+  <div id="nooo"><h1><hr>WAKTU SEKARANG<hr></h1></div>
+  <div id="maooo"></div>  
+  <div id="nooo">
+    <h1><hr>WAKTU MENUJU TAHUN 2022<hr></h1>
+  </div>
+  <div id="baka"></div>
+  <div id="bakb"></div>
+  <div id="bakc"></div>
+  <div id="bakd"></div>
+ </CENTER>
+ <style>
+ body{
+   background:linear-gradient(to right,#0eafd7,#f01dc8);
+   font-family: cursive;
+ }#nooo{
+ color: black;
+ text-shadow: 3px 3px 3px #f880ff;
+   }#baka{
+     font-size: 30px;
+     color: #a8e8fa;
+     text-shadow: 3px 3px 3px #d531e4;
+   }#bakb{
+     font-size: 30px;
+     color: #a8e8fa;
+     text-shadow: 3px 3px 3px #d531e4;
+   }#bakc{
+     font-size: 30px;
+     color: #a8e8fa;
+     text-shadow: 3px 3px 3px #d531e4;
+   }#bakd{
+     font-size: 30px;
+     color: #a8e8fa;
+     text-shadow: 3px 3px 3px #d531e4;
+   }#maooo{
+     font-size: 30px;
+     color: #a8e8fa;
+     text-shadow: 3px 3px 3px #d531e4;
+   }
+ </style>
+ <script>
+  const no = setInterval(function(){ 
+  let r = new Date('dec 31, 2021 00:00:00').getTime();
+  let ww = new Date().getTime();
+  let mm = new Date() + "";
+  var woa = r - ww;
+  
+  if(woa <= 0) {
+  			alert("terimakasih")
+  			clearInterval(no)
+  };
+  //detik
+  var c = Math.floor(woa % (1000 * 60) / (1000));
+  //menit
+  var d = Math.floor(woa % (1000 * 60 * 60) / (1000 * 60));
+  //jam
+  var e = Math.floor(woa % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+  //hari
+  var f = Math.floor(woa / (1000 * 60 * 60 * 24));
+  
+  var nnc = c + 1;
+  var nnb = d ;
+  var nnG = e ;
+  var nnt = f ;
+  document.getElementById('baka');
+  baka.innerHTML =  "[" + nnt + "]" + " hari";
+  document.getElementById('bakb');
+  bakb.innerHTML =  "[" + nnG + "]" + " jam";
+  document.getElementById('bakc');
+  bakc.innerHTML =  "[" + nnb + "]" + " menit";
+  document.getElementById('bakd');
+  bakd.innerHTML = "[" + nnc + "]" + " detik";
+  document.getElementById("maooo");
+  maooo.innerHTML = mm;
+  }, 1000);
+ 
+ </script>
+</body>
+</html>
