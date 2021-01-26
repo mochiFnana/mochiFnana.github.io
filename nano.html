@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<body align="center">
+   
+   
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button id="kaja"><h2>SILAHKAN PILIH SALAH SATU DIANTARA TIGA PILIHAN DIBAWAH INI UNTUK MENENTUKAN SIAPA PEMENANG DI DALAM PERMAINAN SUIT MELAWAN COMPUTER</h2></button>
+    <br><br><hr><hr><hr><br>
+    <button id="kalinka">COMPUTER MEMILIH</button>
+    <br>
+    <button id="kai"></button>
+    <br><br><br>
+    <button id="katyusha">DAN KAMU MEMILIH</button>
+    <br><br><button id="aho"></button>
+    <br><br><br><hr><hr><hr><br>
+  <button id="gajahs" onclick=(gajah(1))><h1>GAJAH</h1></button>
+  <button id="orangs" onclick=(orang(1))><h1>ORANG</h1></button>
+  <button id="semuts" onclick=(semut(1))><h1>SEMUT</h1></button>
+  <br><br>
+  <button id="ema"><h1>KETERANGAN</h1></button>
+  <br>
+   <button id="kal"></button>
+    <br><br>
+    
+  
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 500px;
+    background:linear-gradient(to right,#0eafd7,#f01dc8);
+    align-items: center;
+    justify-content: center;
+  }
+  #gajahs{
+    width: 225px;
+    height: 67.5px;
+    background: none;
+    border: 5px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+  }
+  #semuts{
+    width: 225px;
+    height: 67.5px;
+    background: none;
+    border: 5px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+  }
+  #orangs{
+    width: 225px;
+    height: 67.5px;
+    background: none;
+    border: 5px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+  }
+  #kal{
+    width: 450px;
+    height: 120px;
+    background: none;
+    border: 5px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+    font-size: 25px;
+  }
+  #kaja{
+    width: 700px;
+    background: none;
+    border: 0px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+    font-size: 23px;
+  }
+  #ema{
+    width: 353px;
+    height: 78px;
+    background: none;
+    border: 0px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+  }
+    #kai{
+    width: 353px;
+    height: 78px;
+    background: none;
+    border: 5px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+  }
+    #kalinka{
+    width: 353px;
+    height: 78px;
+    background: none;
+    border: 0px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+    font-size: 37px;
+  }
+    #katyusha{
+    width: 353px;
+    height: 78px;
+    background: none;
+    border: 0px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+    font-size: 37px;
+  }
+    #aho{
+    width: 353px;
+    height: 78px;
+    background: none;
+    border: 5px solid;
+    color: #1cffa6;
+    cursor: pointer;
+    text-transform: uppercase
+    position: relative;
+  }
+  
+
+</style>
+<script>
+
+
+function gajah(a){
+let kai = Math.floor(Math.random() * 3);
+let comp = kai + a;
+  var gajah_melawan_gajah = 1;
+  var gajah_melawan_semut = 2;
+  var gajah_melawan_orang = 3;
+  let hasil='';
+  if(comp == gajah_melawan_gajah){
+    hasil = document.getElementById("kal").innerHTML='<h2>HASIL SERI</h2><h4>KAMU MEMILIH GAJAH DAN COMPUTER JUGA SAMA MEMILIH GAJAH</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>GAJAH</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>GAJAH</h1>'
+  }else if(comp == gajah_melawan_semut){
+    hasil = document.getElementById("kal").innerHTML='<h2>KAMU KALAH</h2><h4>GAJAH YANG KAMU PILIH TIDAK DAPAT MELAWAN SEMUT YANG  DIPILIH OLEH COMPUTER</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>SEMUT</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>GAJAH</h1>'
+  }else if(comp == gajah_melawan_orang){
+    hasil = document.getElementById("kal").innerHTML='<h2>KAMU MENANG</h2><h4>GAJAH PILIHANMU DAPAT MELAWAN ORANG YANG DIPILIH COMPUTER</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>ORANG</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>GAJAH</h1>'
+  }
+    return hasil;
+}
+
+
+function orang(a){
+let kai= Math.floor(Math.random() * 3);
+let comp=kai + a;
+  var orang_melawan_orang = 1;
+  var orang_melawan_gajah = 2;
+  var orang_melawan_semut = 3;
+  let hasil='';
+  if(comp == orang_melawan_orang){
+    hasil = document.getElementById("kal").innerHTML='<h2>HASIL SERI</h2><h4>KAMU MEMILIH ORANG DAN COMPUTER JUGA SAMA MEMILIH ORANG</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>ORANG</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>ORANG</h1>'
+  }else if(comp == orang_melawan_gajah){
+    hasil = document.getElementById("kal").innerHTML='<h2>KAMU KALAH</h2> <h4>ORANG YANG KAMU PILIH TIDAK DAPAT MELAWAN GAJAH YANG  DIPILIH OLEH COMPUTER</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>GAJAH</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>ORANG</h1>'
+  }else if(comp == orang_melawan_semut){
+    hasil = document.getElementById("kal").innerHTML='<h2>KAMU MENANG</h2><h4>ORANG PILIHANMU DAPAT MELAWAN SEMUT YANG DIPILIH COMPUTER</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>SEMUT</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>ORANG</h1>'
+    return hasil;
+}
+}
+
+
+function semut(a){
+let kai= Math.floor(Math.random() * 3);
+let comp=kai + a;
+  var semut_melawan_semut = 1;
+  var semut_melawan_orang = 2;
+  var semut_melawan_gajah = 3;
+  let hasil='';
+  if(comp == semut_melawan_semut){
+    hasil = document.getElementById("kal").innerHTML='<h2>HASIL SERI</h2><h4>KAMU  MEMILIH SEMUT  DAN  COMPUTER JUGA SAMA  MEMILIH SEMUT</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>SEMUT</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>SEMUT</h1>'
+  }else if(comp == semut_melawan_orang){
+    hasil = document.getElementById("kal").innerHTML='<h2>KAMU KALAH</h2><h4>SEMUT YANG KAMU PILIH TIDAK DAPAT MELAWAN ORANG YANG  DIPILIH OLEH COMPUTER</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>ORANG</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>SEMUT</h1>'
+  }else if(comp == semut_melawan_gajah){
+    hasil = document.getElementById("kal").innerHTML='<h2>KAMU MENANG</h2><h4>SEMUT PILIHANMU DAPAT MELAWAN GAJAH YANG DIPILIH COMPUTER</h4>'
+    hasil = document.getElementById("kai").innerHTML='<h1>GAJAH</h1>'
+    hasil = document.getElementById("aho").innerHTML='<h1>SEMUT</h1>'
+  }
+    return hasil;
+}
+</script>
+</body>
+</html>
