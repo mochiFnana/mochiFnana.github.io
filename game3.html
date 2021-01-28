@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+  body{
+    background: linear-gradient(to right,#000000,#ffffff,#000000);
+  }
+  #hanabi{
+    background-color: #c72222;
+    color:rgb(57,30,197);
+    font-size:190px;
+    border-width: 6px;
+    border-color: rgb(57,30,197);
+ }
+ #HIMASA{
+      background: rgb(57,30,197);
+    color:#c72222;
+    font-size:190px;
+    border-width: 6px;
+    border-color: #c72222;
+ }  #hanabiko{
+    background-color: #c72222;
+    color:rgb(57,30,197);
+    font-size:175px;
+    border-width: 0px;
+    border-color: rgb(57,30,197);
+    width: 200px;
+ }
+ #HIMASAI{
+      background: rgb(57,30,197);
+    color:#c72222;
+    font-size:175px;
+    border-width: 0px;
+    border-color: none;
+    width: 200px;
+ }
+ .textview{
+   font-size: 30px;
+ }#kali{
+   width: 300px;
+   height: 180px;
+   font-size: 120px;
+   background: #af40ff;
+ }
+#baju{
+  background:#00ff2a;
+  color:rgb(154,0,147);
+  font-size:72px;
+}
+</style>
+ </style>
+  </head>
+<body align="center">
+  
+  
+  
+  
+  
+  
+  
+  
+
+<button id="hanabi" onclick=playertwo(1)><div id="hanabi">player 2</div></button>
+<br><br><center>
+<div id="hanabiko">0</div>
+</center>
+<style>
+.textview{
+  text-align: center;
+}
+</style>
+<center>
+				<br><br>
+				<div id="kali">0</div>
+				<br><br>
+</center>
+<center>
+<div id="HIMASAI">0</div>
+</center>
+<br><br>
+<button id="HIMASA" onclick=playerone(1)><div id="HIMASA">player 1</div></button>
+<br><br>
+<div id="baju">selamat datang di game<br> "lucky 8"<br> game ini bertujuan untuk<br> mendapatkan angka 8 secara acak<br> dengan meng-click bergiliran<br> antara player 1 dengan player 2</div>
+ 
+
+
+
+
+
+
+
+
+
+
+<script>
+function playertwo(t){
+ var b ;
+ var c ;
+ var d ;
+ b = Math.floor(Math.random() * 9);
+ c = t + b;
+if (c == 8){
+  let i = setTimeout( function(){
+  let e = document.getElementById("hanabiko").innerText;
+  var nn = e * 1 + 1;
+document.getElementById("hanabiko").innerHTML= nn;
+  }, 5)
+}
+console.log(c)
+ document.getElementById("kali").innerHTML= c ;
+};
+
+function playerone(t){
+ var b ;
+ var c ;
+ var d ;
+ b = Math.floor(Math.random() * 10);
+ c = t + b;
+if (c == 8){
+  let i = setTimeout( function(){
+  let e = document.getElementById("HIMASAI").innerText;
+  var nn = e * 1 + 1;
+document.getElementById("HIMASAI").innerHTML= nn;
+  }, 5)
+}
+console.log(c)
+ document.getElementById("kali").innerHTML= c ;
+};
+
+
+
+let manaka = setInterval(function(){
+let e = document.getElementById("hanabiko").innerText;
+let n = document.getElementById("HIMASAI").innerText;
+console.log(n)
+if(e >= 4){
+  let na = confirm("SELAMAT PLAYER 2 MENANG")
+  if (na == 1){
+    document.getElementById("hanabiko").innerHTML="0";
+    document.getElementById("HIMASAI").innerHTML="0";
+  }
+}else if(n >= 4){
+      let ea = confirm("PLAYER 1 MENANG")
+  if (ea == 1){
+    document.getElementById("hanabiko").innerHTML="0";
+    document.getElementById("HIMASAI").innerHTML="0";
+}
+}
+}, 5)
+
+
+</script>
+</body>
+</html>
