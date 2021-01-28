@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<body align="center">
+  <style>
+  body{
+    background: linear-gradient(to right,#000000,#ffffff,#000000);
+  }
+  #hanabi{
+    background-color: #c72222;
+    color:rgb(57,30,197);
+    font-size:70px;
+    border-width: 6px;
+    border-color: rgb(57,30,197);
+ }
+ #HIMASA{
+      background: rgb(57,30,197);
+    color:#c72222;
+    font-size:70px;
+    border-width: 6px;
+    border-color: #c72222;
+ }  #hanabiko{
+    background-color: #c72222;
+    color:rgb(57,30,197);
+    font-size:70px;
+    border-width: 0px;
+    border-color: rgb(57,30,197);
+ }
+ #HIMASAI{
+      background: rgb(57,30,197);
+    color:#c72222;
+    font-size:70px;
+    border-width: 0px;
+    border-color: none;
+ }
+ .textview{
+   font-size: 30px;
+ }
+ </style>
+<button id="hanabi" onclick=game(1)><div id="hanabi">player 2</div></button>
+<br><br>
+<button id="hanabiko"><div id="hanabiko">vs</div></button>
+<style>
+.textview{
+  text-align: center;
+}
+</style>
+<table align="center">
+  <tr>
+    <th>
+      <form class="kali" name="kali">
+        <input type ="text" disabled value="            mochi F. nana">
+        <br>
+        <input type="text" disabled class="textview" name="textview">
+        <br>
+        <input type ="text" disabled value="            mochi F. nana">
+      </form>
+    </th>
+  </tr>
+</table>
+<button id="HIMASAI"><div id="HIMASAI">vs</div></button>
+<br><br>
+<button id="HIMASA" onclick=game(1)><div id="HIMASA">player 1</div></button>
+<br><br>
+<style>
+#baju{
+  background:#00ff2a;
+  color:rgb(154,0,147);
+  font-size:22px;
+}
+</style>
+<div id="baju">selamat datang di game<br> "lucky 8"<br> game ini bertujuan untuk<br> mendapatkan angka 8 secara acak<br> dengan meng-click bergiliran<br> antara player 1 dengan player 2</div>
+<script>
+function game(t){
+ var b ;
+ var c ;
+ var d ;
+ b = Math.floor(Math.random() * 16);
+ c = t + b;
+if (c == 8){
+  alert('YOU WINNER')
+}
+console.log(c)
+ document.kali.textview.value = c
+};
+</script>
+</body>
+</html>
