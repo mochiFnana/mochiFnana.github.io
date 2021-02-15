@@ -70,11 +70,38 @@
      color: #4740ff;
      text-shadow: 3px 3px 3px #d531e4;
      font-family: serif;
-     border-color: #ff7455;
-     border: 30px solid;
+     border: 30px solid #ff7455;
    }
  </style>
  <script>
+  let r = new Date('dec 31, 2021 00:00:00').getTime();
+  let ww = new Date().getTime();
+  let mm = new Date() + "";
+  var woa = r - ww;
+  //detik
+  var c = Math.floor(woa % (1000 * 60) / (1000));
+  //menit
+  var d = Math.floor(woa % (1000 * 60 * 60) / (1000 * 60));
+  //jam
+  var e = Math.floor(woa % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+  //hari
+  var f = Math.floor(woa / (1000 * 60 * 60 * 24));
+  
+  var nnc = c + 1;
+  var nnb = d ;
+  var nnG = e ;
+  var nnt = f ;
+  document.getElementById('baka');
+  baka.innerHTML =  "[" + nnt + "]" + " hari";
+  document.getElementById('bakb');
+  bakb.innerHTML =  "[" + nnG + "]" + " jam";
+  document.getElementById('bakc');
+  bakc.innerHTML =  "[" + nnb + "]" + " menit";
+  document.getElementById('bakd');
+  bakd.innerHTML = "[" + nnc + "]" + " detik";
+  document.getElementById("maooo");
+  maooo.innerHTML = mm;
+
   const no = setInterval(function(){ 
   let r = new Date('dec 31, 2021 00:00:00').getTime();
   let ww = new Date().getTime();
