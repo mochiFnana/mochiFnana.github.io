@@ -55,7 +55,7 @@ t=()=>{
     
     plyr.style.top=pt+"px";
     console.log(pl+"\n"+pt);
-    if((pt+10)<=139&&(pl+10)>=80||(pl+10)<=(-175+120)&&(pt+10)<=139||pt<=0){
+    if((pt+10)<=139&&(pl+10)>=80||(pl+10)<=(-175+119)&&(pt+10)<=139||pt<=0){
       plyr.style.top=pt+"px";
       clearInterval(top);
     }else{
