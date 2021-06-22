@@ -55,7 +55,7 @@ t=()=>{
     
     plyr.style.top=pt+"px";
     console.log(pl+"\n"+pt);
-    if((pt+10)<=139&&(pl+10)>=80||(pl+10)<=(-174+110)&&(pt+10)<=139||pt<=0){
+    if((pt+10)<=139&&(pl+10)>=80||(pl+10)<=(-175+120)&&(pt+10)<=139||pt<=0){
       plyr.style.top=pt+"px";
       clearInterval(top);
     }else{
@@ -113,7 +113,7 @@ r=()=>{
     
     
     console.log((pl+10)+"\n"+pt);
-    if((pl+10)>=79&&(pt+10)<=135||(pl+10)>=29&&(pt+10)>=204||pl>=166){
+    if(( pl+10)>=79&&(pt+10)<=135||(pl+10)>=29&&(pt+10)>=204||pl>=166){
       plyr.style.left=pl+"px";
       clearInterval(right);
     }else{
