@@ -85,7 +85,7 @@ l=()=>{
     
     console.log(pl+"\n"+pt);
     
-    if(pl<=(-175+110)&&(pt+10)<=138||pl<=(-175+85)){
+    if(pl<=(-175+111)&&(pt+10)<=138||pl<=(-175+85)){
       plyr.style.left=pl+"px";
       clearInterval(left);
     }else{
