@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#nano{
+  position: absolute;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background: red;
+}#con1{
+  top: 5px;
+  background-image: url('https://i.ibb.co/TtvTZDP/p1.jpg');
+  background-size: 350px 350px;
+  width: 350px;
+  height: 350px;
+  position: relative;
+}#con2{
+  width: 2px;
+  height: 350px;
+  position: relative;
+}
+#wall1{
+  position: absolute;
+  background: #e7414161;
+  width: 95px;
+  height: 145px;
+  left: 80px;
+}#t,#l,#r,#d,#nnn{
+  width: 50px;
+  height: 50px;
+  background: red;
+}#nnn{
+  background: #00000000;
+}#nn{
+  display: flex;
+  width: 195px;
+  justify-content: space-between;
+}
+
+
+#player{
+  width: 10px;
+  height: 30px;
+  background: #2ff12f;
+  position: absolute;
+}
