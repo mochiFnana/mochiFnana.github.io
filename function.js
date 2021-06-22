@@ -1,0 +1,9 @@
+doc=(a)=>document.getElementById(a);
+wal=(a,b,c,d,e)=>{
+  doc(a).style.position="absolute";
+  doc(a).style.background="#00000000";
+  doc(a).style.width=b+"px";
+  doc(a).style.height=c+"px";
+  doc(a).style.left=d+"px";
+  doc(a).style.top=e+"px";
+}
