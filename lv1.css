@@ -1,0 +1,46 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#nano{
+  position: absolute;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background: red;
+}#con1{
+  top: 5px;
+  background-image: url('https://i.ibb.co/brZpth5/bakaa.jpg');
+  background-size: 350px 350px;
+  width: 350px;
+  height: 350px;
+  position: relative;
+}#con2{
+  width: 2px;
+  height: 350px;
+  position: relative;
+}
+#wall1{
+  position: absolute;
+  background: #e7414161;
+  width: 95px;
+  height: 145px;
+  left: 80px;
+}#t,#l,#r,#d,#nnn{
+  width: 70px;
+  height: 70px;
+  background: red;
+}#nnn{
+  background: white;
+}#nn{
+  display: flex;
+  width: 260px;
+  justify-content: space-between;
+}
+#player{
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  z-index: 3;
+  background: #da3eea;
+}
