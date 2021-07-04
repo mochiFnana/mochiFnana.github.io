@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      game_art
+    </title>
+   <style>
+     body{
+  margin: 0;
+  padding: 0;
+}#nano{
+  position: absolute;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background: red;
+}#con1{
+  top: 5px;
+  background-image: url('https://i.ibb.co/dbDxYmt/p2.png'); /*url('https://i.ibb.co/brZpth5/bakaa.jpg');*/
+  background-size: 512px 512px;
+  width: 512px;
+  height: 512px;
+  position: relative;
+}#t,#l,#r,#d,#nnn{
+  width: 200px;
+  height: 200px;
+  background: red;
+}#nnn{
+  background: white;
+}#nn{
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+}#p{
+  width: 15px;
+  height: 25px;
+  position: absolute;
+  background: #1b0cf7;
+  left: 245px;
+  top: 485px;
+}#con2{
+  top: 5px;
+  background-image: url('https://i.ibb.co/xMMHQv6/p3.png');
+  background-size: 512px 512px;
+  width: 512px;
+  height: 512px;
+  position: relative;
+}#con{
+  display: flex;
+}
+   </style>
+  </head>
+  <body>
+  <center>
+  
+  <nav id="con">
+    <nav id="con1">
+      <div id="w1"></div>
+      <div id="w2"></div>
+      <div id="w3"></div>
+      <div id="w4"></div>
+      <div id="w5"></div>
+      <div id="w6"></div>
+      <div id="w7"></div>
+      <div id="w8"></div>
+      <div id="w9"></div>
+      <div id="w10"></div>
+      <div id="w11"></div>
+      <div id="w12"></div>
+      <div id="w13"></div>
+      <div id="w14"></div>
+      <div id="w15"></div>
+      <div id="w16"></div>
+      <div id="w17"></div>
+      <div id="w18"></div>
+      <div id="w19"></div>
+      <div id="w20"></div>
+      <div id="w21"></div>
+      <div id="w22"></div>
+      <div id="w23"></div>
+      <div id="w24"></div>
+      <div id="w25"></div>
+      <div id="w26"></div>
+      <div id="w27"></div>
+      <div id="w28"></div>
+      <div id="w29"></div>
+      <div id="w30"></div>
+      <div id="w31"></div>
+      <div id="w32"></div>
+      
+      
+      <div id="w33"></div>
+      <div id="w34"></div>
+      <div id="w35"></div>
+      <div id="w36"></div>
+      <div id="w37"></div>
+      <div id="w38"></div>
+      <div id="w39"></div>
+      <div id="w40"></div>
+      <div id="w41"></div>
+      <div id="w42"></div>
+      <div id="w43"></div>
+      <div id="w44"></div>
+      <div id="w45"></div>
+      <div id="win"></div>
+
+      <nav id="p"></nav>
+     
+    </nav>
+    <nav id="con2">
+      
+    </nav>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <nav id="ctrl">
+    <button id="t" ontouchstart="niii(1)" ontouchend="chan()"></button>
+    <br>
+    <nav id="nn">
+    <button id="l" ontouchstart="niii(4)" ontouchend="chan()"></button>
+    <nav id="nnn"></nav>
+    <button id="r" ontouchstart="niii(3)" ontouchend="chan()"></button>
+    </nav>
+    <br>
+    <button id="d" ontouchstart="niii(2)" ontouchend="chan()"></button>
+  </nav>
+  </center>
+  
+<meta name="viewport" content="width=1024">
+<script>
+// DOM function
+doc=(a)=>document.getElementById(a);
+
+// mengedit tembok function
+wal=(a,b,c,d,e)=>{
+  doc(a).style.position="absolute";
+  doc(a).style.width=(b/2)+"px";
+  doc(a).style.height=(c/2)+"px";
+  doc(a).style.left=(d/2)+"px";
+  doc(a).style.top=(e/2)+"px";
+};
+
+// batasan antara player dengan tembok (agar tidak
+// tembus masuk ke tembok) function
+block=(object,player)=>{
+  var bool;
+  var p = doc(player);
+  var o = doc(object);
+  var pl = p.offsetLeft;
+  var pt = p.offsetTop;
+  var ph = p.offsetHeight;
+  var pw = p.offsetWidth;
+  var ol = o.offsetLeft;
+  var ot = o.offsetTop;
+  var oh = o.offsetHeight;
+  var ow = o.offsetWidth;
+  if((pt+ph)>(ot-1)&&pt<(ot+oh)&&(pl+pw)>ol&&pl<(ol+ow)){
+    bool = 1;
+  }else if((pt+ph)>ot&&pt<(ot+(oh+1))&&(pl+pw)>ol&&pl<(ol+ow)){
+    bool = 2;
+  }else if((pt+ph)>ot&&pt<(ot+oh)&&(pl+pw)>(ol-1)&&pl<(ol+ow)){
+    bool = 3;
+  }else if((pt+ph)>ot&&pt<(ot+oh)&&(pl+pw)>ol&&pl<(ol+(ow+1))){
+    bool = 4;
+  }else{
+    bool = 10;
+  }
+  return bool;
+};
+b_arena=(A,P)=>{
+  var bool;
+  var p = doc(P);
+  var o = doc(A);
+  var pl = p.offsetLeft;
+  var pt = p.offsetTop;
+  var ph = p.offsetHeight;
+  var pw = p.offsetWidth;
+  var ol = o.offsetLeft;
+  var ot = o.offsetTop;
+  var oh = o.offsetHeight;
+  var ow = o.offsetWidth;
+  if(pt<(ot-ot)){
+    bool = 2;
+  }else if((pt+ph)>((ot-ot)+oh)){
+    bool = 1;
+  }else if(pl<(ol-ol)){
+    bool = 4;
+  }else if((pl+pw)>((ol-ol)+ow)){
+    bool = 3;
+  }else{
+    bool = 10;
+  }
+  return bool;
+};
+wal("w1",290,14,78,85);
+wal("w2",390,14,450,85);
+wal("w3",108,14,915,85);
+wal("w4",622,14,0,171);
+wal("w5",240,14,704,171);
+wal("w6",468,14,73,258);
+wal("w7",150,14,610,258);
+wal("w21",170,14,850,258);
+wal("w8",444,14,0,344);
+wal("w9",144,14,527,344);
+wal("w10",200,14,750,344);
+wal("w11",168,14,0,422);
+wal("w12",780,14,243,422);
+wal("w13",74,14,0,508);
+wal("w14",89,14,160,508);
+wal("w15",265,14,427,508);
+wal("w16",154,14,779,508);
+wal("w17",89,14,77,592);
+wal("w18",185,14,252,592);
+wal("w19",169,14,620,592);
+wal("w20",145,14,878,592);
+wal("w22",125,14,0,682);
+wal("w23",125,14,207,682);
+wal("w24",165,14,430,682);
+wal("w25",160,14,780,682);
+wal("w26",135,14,80,760);
+wal("w27",510,14,315,760);
+wal("w28",98,14,925,760);
+wal("w28",98,14,925,760);
+wal("w29",120,14,0,845);
+wal("w30",375,14,220,845);
+wal("w31",230,14,688,845);
+
+
+wal("w32",14,97,208,0);
+wal("w33",14,97,450,0);
+wal("w34",14,97,826,85);
+wal("w35",14,97,257,171);
+wal("w36",14,97,609,171);
+wal("w37",14,97,527,258);
+wal("w38",14,97,748,258);
+wal("w39",14,182,154,422);
+wal("w40",14,182,518,422);
+wal("w41",14,260,779,422);
+wal("w42",14,186,320,508);
+wal("w43",14,90,204,682);
+wal("w44",14,178,683,682);
+wal("w45",14,97,312,760);
+wal("win",130,97,470,0);
+
+
+/*
+
+1 = [object]
+2 = [width]
+3 = [height]
+4 = [left]
+5 = [top]
+
+*/
+
+var plyr = doc("p");
+
+  var pt = plyr.offsetTop;
+  var pl = plyr.offsetLeft;
+  
+  var t = [];
+  
+  setInterval(()=>{
+    
+  var k = parseInt(Math.random()*50)+1;
+  console.log(k);
+    
+    var w = [];
+    
+    //var x = dom("v");
+    //x.style.backgroundColor="red";
+    
+    var hh = 1;
+    
+    plyr.style.top=pt+"px";
+    plyr.style.left=pl+"px";
+    
+    
+    w[0] = b_arena("con1","p");
+    w[1] = block("w1","p");
+    w[2] = block("w2","p");
+    w[3] = block("w3","p");
+    w[4] = block("w4","p");
+    w[5] = block("w5","p");
+    w[6] = block("w6","p");
+    w[7] = block("w7","p");
+    w[8] = block("w8","p");
+    w[9] = block("w9","p");
+    w[10] = block("w10","p");
+    w[11] = block("w11","p");
+    w[12] = block("w12","p");
+    w[13] = block("w13","p");
+    w[14] = block("w14","p");
+    w[15] = block("w15","p");
+    w[16] = block("w16","p");
+    w[17] = block("w17","p");
+    w[18] = block("w18","p");
+    w[19] = block("w19","p");
+    w[20] = block("w20","p");
+    w[21] = block("w21","p");
+    w[22] = block("w22","p");
+    w[23] = block("w23","p");
+    w[24] = block("w24","p");
+    w[25] = block("w25","p");
+    w[26] = block("w26","p");
+    w[27] = block("w27","p");
+    w[28] = block("w28","p");
+    w[29] = block("w29","p");
+    w[30] = block("w30","p");
+    w[31] = block("w31","p");
+    w[32] = block("w32","p");
+    w[33] = block("w33","p");
+    w[34] = block("w34","p");
+    w[35] = block("w35","p");
+    w[36] = block("w36","p");
+    w[37] = block("w37","p");
+    w[38] = block("w38","p");
+    w[39] = block("w39","p");
+    w[40] = block("w40","p");
+    w[41] = block("w41","p");
+    w[42] = block("w42","p");
+    w[43] = block("w43","p");
+    w[44] = block("w44","p");
+    w[45] = block("w45","p");
+    w[46] = block("win","p");
+    var a = 1;
+    var b = 2;
+    var c = 3;
+    var d = 4;
+// w[1]==d||w[2]==d||w[3]==d||w[4]==d||w[5]==d||w[6]==d||w[7]==d||w[8]==d||w[9]==d||w[10]==d||w[11]==d||w[12]==d||w[13]==d||w[14]==d||w[15]==d||w[16]==d||w[17]==d||w[18]==d||w[19]==d||w[20]==d||w[21]==d||w[22]==d||w[23]==d||w[24]==d||w[25]==d||w[26]==d||w[27]==d||w[28]==d||w[29]==d||w[30]==d||w[31]==d||w[32]==d||w[33]==d||w[34]==d||w[35]==d||w[36]==d||w[37]==d||w[38]==d||w[39]==d||w[40]==d||w[41]==d||w[42]==d||w[43]==d||w[44]==d||w[45]==d
+//    w[46] = block("win","p");
+    
+    if(t[0]==1){
+      if(w[0]==b||w[1]==b||w[2]==b||w[3]==b||w[4]==b||w[5]==b||w[6]==b||w[7]==b||w[8]==b||w[9]==b||w[10]==b||w[11]==b||w[12]==b||w[13]==b||w[14]==b||w[15]==b||w[16]==b||w[17]==b||w[18]==b||w[19]==b||w[20]==b||w[21]==b||w[22]==b||w[23]==b||w[24]==b||w[25]==b||w[26]==b||w[27]==b||w[28]==b||w[29]==b||w[30]==b||w[31]==b||w[32]==b||w[33]==b||w[34]==b||w[35]==b||w[36]==b||w[37]==b||w[38]==b||w[39]==b||w[40]==b||w[41]==b||w[42]==b||w[43]==b||w[44]==b||w[45]==b){
+        pt = pt;
+      }else{
+        pt=pt-hh;
+      }
+    }else if(t[0]==2){
+      if(w[0]==1||w[1]==a||w[2]==a||w[3]==a||w[4]==a||w[5]==a||w[6]==a||w[7]==a||w[8]==a||w[9]==a||w[10]==a||w[11]==a||w[12]==a||w[13]==a||w[14]==a||w[15]==a||w[16]==a||w[17]==a||w[18]==a||w[19]==a||w[20]==a||w[21]==a||w[22]==a||w[23]==a||w[24]==a||w[25]==a||w[26]==a||w[27]==a||w[28]==a||w[29]==a||w[30]==a||w[31]==a||w[32]==a||w[33]==a||w[34]==a||w[35]==a||w[36]==a||w[37]==a||w[38]==a||w[39]==a||w[40]==a||w[41]==a||w[42]==a||w[43]==a||w[44]==a||w[45]==a){
+        pt = pt;
+      }else{
+        pt=pt+hh;
+      }
+    }else if(t[0]==3){
+      if(w[0]==c||w[1]==c||w[2]==c||w[3]==c||w[4]==c||w[5]==c||w[6]==c||w[7]==c||w[8]==c||w[9]==c||w[10]==c||w[11]==c||w[12]==c||w[13]==c||w[14]==c||w[15]==c||w[16]==c||w[17]==c||w[18]==c||w[19]==c||w[20]==c||w[21]==c||w[22]==c||w[23]==c||w[24]==c||w[25]==c||w[26]==c||w[27]==c||w[28]==c||w[29]==c||w[30]==c||w[31]==c||w[32]==c||w[33]==c||w[34]==c||w[35]==c||w[36]==c||w[37]==c||w[38]==c||w[39]==c||w[40]==c||w[41]==c||w[42]==c||w[43]==c||w[44]==c||w[45]==c){
+        pl = pl;
+      }else{
+        pl=pl+hh;
+      }
+    }else if(t[0]==4){
+      if(w[0]==d||w[1]==d||w[2]==d||w[3]==d||w[4]==d||w[5]==d||w[6]==d||w[7]==d||w[8]==d||w[9]==d||w[10]==d||w[11]==d||w[12]==d||w[13]==d||w[14]==d||w[15]==d||w[16]==d||w[17]==d||w[18]==d||w[19]==d||w[20]==d||w[21]==d||w[22]==d||w[23]==d||w[24]==d||w[25]==d||w[26]==d||w[27]==d||w[28]==d||w[29]==d||w[30]==d||w[31]==d||w[32]==d||w[33]==d||w[34]==d||w[35]==d||w[36]==d||w[37]==d||w[38]==d||w[39]==d||w[40]==d||w[41]==d||w[42]==d||w[43]==d||w[44]==d||w[45]==d){
+        pl = pl;
+      }else{
+        pl=pl-hh;
+      }
+      if(w[46]==d){
+        for (var i = 0; i < Infinity; i++) {
+          alert("selamat anda menang")
+        }
+      }
+    }else{
+      pt = pt;
+      pl = pl;
+    }
+   // console.log(w[0],w[1],w[2],w[3],w[4]);*/
+  },0);
+  niii=(p)=>{
+    t[0]=p;
+  };
+  chan=()=>{
+    t[0]=0;
+  };
+</script>
+  </body>
+</html>
